@@ -4,9 +4,60 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tic Tac Toe</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
+    <main class="game">
+      <header class="game__header">
+        <h1 class="game__title">Tic Tac Toe</h1>
+        <p id="game-status" class="game__status game__status--x">
+          Turn of Player X
+        </p>
+      </header>
+
+      <section class="scoreboard">
+        <div class="score score--x">
+          <span class="score__label">Player X</span>
+          <span id="score-x" class="score__value">0</span>
+        </div>
+
+        <div class="score score--draw">
+          <span class="score__label">Draws</span>
+          <span id="score-draw" class="score__value">0</span>
+        </div>
+
+        <div class="score score--o">
+          <span class="score__label">Player O</span>
+          <span id="score-o" class="score__value">0</span>
+        </div>
+      </section>
+
+      <section id="game-board" class="board">
+        <button class="cell" data-index="0" aria-label="Cell 1"></button>
+        <button class="cell" data-index="1" aria-label="Cell 2"></button>
+        <button class="cell" data-index="2" aria-label="Cell 3"></button>
+        <button class="cell" data-index="3" aria-label="Cell 4"></button>
+        <button class="cell" data-index="4" aria-label="Cell 5"></button>
+        <button class="cell" data-index="5" aria-label="Cell 6"></button>
+        <button class="cell" data-index="6" aria-label="Cell 7"></button>
+        <button class="cell" data-index="7" aria-label="Cell 8"></button>
+        <button class="cell" data-index="8" aria-label="Cell 9"></button>
+      </section>
+
+      <div class="game__actions">
+        <button id="new-game-button" class="button">New game</button>
+        <button id="reset-game-button" class="button button__secondary">
+          Reset Game
+        </button>
+      </div>
+    </main>
+
     <script type="module" src="./js/main.js"></script>
   </body>
 </html>
