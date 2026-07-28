@@ -21,6 +21,49 @@
         </p>
       </header>
 
+      <section class="settings-panel">
+        <div class="settings-panel__row">
+          <label for="game-mode-select" class="settings-panel__label"
+            >Game Mode</label
+          >
+          <select id="game-mode-select" class="select-control">
+            <option value="3x3" selected>Tic Tac Toe (3x3 - 3 to win)</option>
+            <option value="10x10">Standard Caro (10x10 - 5 to win)</option>
+            <option value="custom">Custom Mode</option>
+          </select>
+        </div>
+
+        <div id="custom-settings" class="custom-settings hidden">
+          <div class="settings-panel__row">
+            <label for="custom-board-size" class="settings-panel__label"
+              >Board Size (N x N) [3-20]</label
+            >
+            <input
+              type="number"
+              id="custom-board-size"
+              min="3"
+              max="20"
+              value="3"
+              class="input-control"
+            />
+          </div>
+          <div class="settings-panel__row">
+            <label for="custom-win-length" id="custom-win-length-label" class="settings-panel__label"
+              >Win Length [3 or 5]</label
+            >
+            <input
+              type="number"
+              id="custom-win-length"
+              step="2"
+              min="3"
+              max="5"
+              value="3"
+              class="input-control"
+            />
+          </div>
+        </div>
+      </section>
+
       <section class="scoreboard">
         <div class="score score--x">
           <span class="score__label">Player X</span>
@@ -39,15 +82,7 @@
       </section>
 
       <section id="game-board" class="board">
-        <button class="cell" data-index="0" aria-label="Cell 1"></button>
-        <button class="cell" data-index="1" aria-label="Cell 2"></button>
-        <button class="cell" data-index="2" aria-label="Cell 3"></button>
-        <button class="cell" data-index="3" aria-label="Cell 4"></button>
-        <button class="cell" data-index="4" aria-label="Cell 5"></button>
-        <button class="cell" data-index="5" aria-label="Cell 6"></button>
-        <button class="cell" data-index="6" aria-label="Cell 7"></button>
-        <button class="cell" data-index="7" aria-label="Cell 8"></button>
-        <button class="cell" data-index="8" aria-label="Cell 9"></button>
+        <!-- <button class="cell" data-index="0" aria-label="Cell 1"></button> -->
       </section>
 
       <div class="game__actions">
